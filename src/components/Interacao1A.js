@@ -93,7 +93,12 @@ const Interacao1A = () => {
       <TituloInteracao>Interação 1 - A</TituloInteracao>
       <DivInteracoesA>
         <DivInteracoesANumeros>
-          <h4 style={{marginBottom:"0"}}>Lista de números para ordernar <br/><span style={{fontWeight:'300'}}>clique nos círculos abaixo para escolher um número</span></h4>
+          <h4 style={{ marginBottom: "0" }}>
+            Lista de números para ordernar <br />
+            <span style={{ fontWeight: "300" }}>
+              clique nos círculos abaixo para escolher um número
+            </span>
+          </h4>
           <section>
             {listaN.map((e, i) => (
               <CardInteracao1A
@@ -110,7 +115,13 @@ const Interacao1A = () => {
           </div>
         </DivInteracoesANumeros>
         <DivInteracoesALetras>
-          <h4>Lista de letras para ordernar<br/><span style={{fontWeight:'300'}}>clique nos retângulos abaixo para digitar uma palavra/letra</span></h4>
+          <h4>
+            Lista de letras para ordernar
+            <br />
+            <span style={{ fontWeight: "300" }}>
+              clique nos retângulos abaixo para digitar uma palavra/letra
+            </span>
+          </h4>
           <section>
             {listaS.map((e, i) => (
               <CardInterecao1ALetras

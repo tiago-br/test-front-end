@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { corDeFundo } from "./variaveis";
 
-
 const GlobalStyle = createGlobalStyle`
     body{
     padding: 0;
@@ -9,6 +8,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Times New Roman', Times, serif;
     background-color: ${corDeFundo};
     }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
