@@ -12,14 +12,6 @@ import {
 import CardInteracao1A from "./CardInteracao1A";
 import CardInterecao1ALetras from "./CardInterecao1ALetras";
 
-// axios({
-//     method: 'post',
-//     url: '/user/12345',
-//     data: {
-//       nome: 'Victor',
-//       sobrenome: 'Nogueira'
-//     }
-//   });
 const ordernarListas = async (salaN, salaS) => {
   const payload = {
     listas: {
@@ -71,7 +63,7 @@ const Interacao1A = () => {
     event.preventDefault();
     const { value } = event.target;
     const regexp = /[^a-zA-Z]/g;
-    if (value.match(regexp) || value.length >= 6) {
+    if (value.match(regexp) || value.length >= 7) {
       return null;
     }
     const copyLista = [...listaS];
@@ -95,13 +87,13 @@ const Interacao1A = () => {
       setTextErr("");
     }, 2000);
   }
-  
+
   return (
-    <div style={{height:"80vh"}}>
+    <div style={{ minHeight: "75vh", marginBottom: "1.5rem" }}>
       <TituloInteracao>Interação 1 - A</TituloInteracao>
       <DivInteracoesA>
         <DivInteracoesANumeros>
-          <h4>Lista de números para ordernar</h4>
+          <h4 style={{marginBottom:"0"}}>Lista de números para ordernar <br/><span style={{fontWeight:'300'}}>clique nos círculos abaixo para escolher um número</span></h4>
           <section>
             {listaN.map((e, i) => (
               <CardInteracao1A
@@ -118,7 +110,7 @@ const Interacao1A = () => {
           </div>
         </DivInteracoesANumeros>
         <DivInteracoesALetras>
-          <h4>Lista de letras para ordernar</h4>
+          <h4>Lista de letras para ordernar<br/><span style={{fontWeight:'300'}}>clique nos retângulos abaixo para digitar uma palavra/letra</span></h4>
           <section>
             {listaS.map((e, i) => (
               <CardInterecao1ALetras
@@ -153,7 +145,7 @@ const Interacao1A = () => {
             <div>
               {resultListas.listas.salaN.map((e, i, arr) => {
                 let simbol = "<";
-                if (e === arr[i+1]) {
+                if (e === arr[i + 1]) {
                   simbol = "<=";
                 }
                 if (arr.length - 1 === i) {
@@ -171,16 +163,20 @@ const Interacao1A = () => {
           <div>
             <h4>Lista de letras em ordem alfabética:</h4>
             <div>
-              {resultListas.listas.salaS.map((e, i, arr) =>{
+              {resultListas.listas.salaS.map((e, i, arr) => {
                 let simbol = "<";
                 if (arr.length - 1 === i) {
                   simbol = "";
                 }
-                if (e === arr[i+1]) {
+                if (e === arr[i + 1]) {
                   simbol = "=";
                 }
-                return <strong key={`${i},${e}listaN`}>{e} {" "}{simbol}{" "}</strong>}
-              )}
+                return (
+                  <strong key={`${i},${e}listaN`}>
+                    {e} {simbol}{" "}
+                  </strong>
+                );
+              })}
             </div>
           </div>
         </Listas>

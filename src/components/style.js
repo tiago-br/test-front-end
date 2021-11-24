@@ -151,5 +151,53 @@ export const Listas = styled.div`
 
 export const DivInteracao1B = styled.div`
     background-color: ${corDeFundoAlternada};
-    height: 80vh;
+    height: 65vh;
+    padding-top: 0.5rem;
+`
+
+export const DivInputsIntervalos = styled.div`
+    min-width: 500px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    
+    /* div{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    } */
+    >div{
+        display: flex;
+        width: 25vw;
+        min-height: 12rem;
+        border:3px solid black;
+        background-color:${corDaBox};
+        align-items: center;
+        flex-direction: column;
+        border-radius: 25px;
+    }
+    
+    h5{
+        
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    label{
+        display: block;
+    }
+
+    input{
+        margin-top: 0.5rem;
+        cursor: pointer;
+        width:2.5rem;
+        height: 1.5rem;
+        border:2px solid black;
+        outline: none;
+        text-align: center;
+        ::-webkit-outer-spin-button,
+    ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    }
 `
