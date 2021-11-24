@@ -24,7 +24,8 @@ export default function Interacao1B() {
 
   async function checar(intervaloA, intervaloB) {
     const checkCompletA = intervaloA.split(",");
-    const checkCompletB = intervaloA.split(",");
+    const checkCompletB = intervaloB.split(",");
+    console.log(checkCompletB , checkCompletA)
     if (checkCompletA.includes("") || checkCompletB.includes("")) {
       setResult("Todos os campos a cima precisam ser preenchidos");
       setColorResult("black");
